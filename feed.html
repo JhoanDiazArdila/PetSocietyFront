@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Feed - Social Network</title>
+    <link rel="shortcut icon" href="images/LogoOpc2.png" type="image/x-icon">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Icons FontAwesome 4.7.0 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  type="text/css" />
+
+
+
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="navbar_menuicon" id="navicon">
+            <i class="fa fa-navicon"></i>
+        </div>
+        <div class="navbar_logo">
+            <img src="images/LogoOpc2.png" alt="" />
+        </div>
+        <div class="navbar_page">
+            <span>-> PETSOCIETY</span>
+        </div>
+        <div class="navbar_search">
+            <form method="" action="/">
+                <input type="text" placeholder="Search people.." />
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="navbar_icons">
+            <ul>
+                <a href="notifications.html" style="color:white">
+                    <li id="messagesmodal">
+                        <i class="fa fa-user-o"></i>
+                        <span id="notification">2</span>
+                    </li>
+                </a>
+                <a href="index.html" style="color:white">
+                    <li>
+                        <i class="fa fa-globe"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="navbar_user" id="profilemodal" style="cursor:pointer">
+            <img src="images/user.jpg" alt="" />
+            <span id="navbar_user_top">Jonh Hamstrong<br><p>User</p></span>
+            <i class="fa fa-angle-down"></i>
+        </div>
+    </div>
+<!-- FINALIZA NAVEGACION SUPERIOR -->
+
+    <div class="all">
+
+        <div class="rowfixed"></div>
+        <div class="left_row">
+            <div class="left_row_profile fondo">
+                <img id="portada" src="images/portada.jpg" />
+                <div class="left_row_profile" id="profilemodal" >
+                    <img id="profile_pic" src="images/user.jpg" />
+                    <span>Jonh Hamstrong<br><p>150k followers / 50 follow</p></span>
+                </div>
+            </div>
+            <div class="rowmenu">
+                <ul>
+                    <li><a href="index.html" ><i class="fa fa-globe"></i>Newsfeed</a></li>
+                    <li><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
+                </ul>
+            </div>
+        </div>
+<!-- FINALIZA ESPACIO IZQUIERDO CON SUbMENU --> 
+
+
+        <div class="right_row">
+
+<!-- INICIA PUBLICACION CON  FOTO -->
+            <div id="handlerPosts1">
+                <div class="row1 border-radius">
+                    <div class="feed">
+                        <div class="modalOptPost optionsModal">
+                            <div class="modal-content">
+                                <button class="updateBtn">Update</button>
+                                <button class="deleteBtn">Delete</button>
+                            </div>
+                        </div>
+                        <div id="editModal" class="modalEditPost">
+                            <div class="modal-content1">
+                                <span class="close">X</span>
+                                <h2>Edit Post</h2>
+                                <form id="editForm">
+                                    <textarea type="text" id="editText" placeholder="Edit your text here" required></textarea>
+                                    <button type="submit" class="submitEditBtn">SUBMIT</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modalLikePost">
+                            <div class="modal-content2">
+                                <span class="close">X</span>
+                                <h2>Likes On Post</h2>
+                                <div class="likes-container">
+    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feed_title">
+                            <div class="userInfo">
+                                <img src="images/user-7.jpg" alt="" />
+                                <span>
+                                    <a href="#" class="save-email" data-email="${post.emailUser}">Marina Valentine
+                                    </a> shared a 
+                                    <a href="feed.html">photo</a><br><p>March 2 at 6:05pm</p>
+                                </span>
+                            </div>
+                            <i class="fa fa-ellipsis-h optionsPost toggleModal"></i>
+                        </div>
+                        <div class="feed_content">
+                            <div class="feed_content_image">
+                                <a href="feed.html">
+                                    <img src="images/gato1.jpg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="text_photo">
+                            <p class="textphoto" data-post-id="${post.postId}">
+                                Hey guys! I just wanted to share with you this amazing photo of my cat, he is so cute!
+                            </p>
+                            <button class="toggleBtnMore" >More</button>
+                        </div>
+                        
+                        <div class="feed_footer">
+                            <ul class="feed_footer_left">
+                                <li class="hover-orange likeButton ${isLiked ? 'active-like' : ''}" data-like-id="${likeId}">
+                                    <i class="fa fa-heart"></i> 150 Likes
+                                </li>
+                                <li><span class="seeMore">See who</span></li>
+                            </ul>
+                            <ul class="feed_footer_right">
+                                <li>
+                                    <a href="feed.html" class="selected-orange hover-orange">
+                                        <li>
+                                            <i class="fa fa-comments-o"></i> 14 Comments
+                                        </li>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+<!-- EMPIEZAN LOS COMENTARIOS -->
+
+                <div class="feedcomments">
+                    <ul>
+                        <li>
+                            <div class="feedcomments-user">
+                                <img src="images/user-6.jpg" />
+                                <span><b>Mathilda Brinker</b><br><p>38 mins ago</p></span>
+                            </div>
+                            <div class="feedcomments-comment">
+                                <p>Ratione voluptatem sequi en lod nesciunt. Neque porro quisquam est, quinder dolorem ipsum quia dolor sit amet, consectetur adipisci velit en lorem ipsum duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                            </div>
+                            <div class="feedcomments-foot">
+                                <i class="fa fa-heart"></i><span>3 likes</span>
+                                <p><a href="#"><i class="fa fa-reply"></i> reply</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feedcomments-user">
+                                <img src="images/user.jpg" />
+                                <span><b>Jonh Hamstrong</b><br><p>1 hour ago</p></span>
+                            </div>
+                            <div class="feedcomments-comment">
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium der doloremque laudantium.</p>
+                            </div>
+                            <div class="feed_footer1">
+                                <ul class="feed_footer_left1">
+                                    <li class="hover-orange likeButton ${isLiked ? 'active-like' : ''}" data-like-id="${likeId}">
+                                        <i class="fa fa-heart"></i> 11 Likes
+                                    </li>
+                                    <li><span class="seeMore">See who</span></li>
+                                </ul>
+                                <ul class="feed_footer_right1">
+                                    <li>
+                                        <a href="feed.html" class="selected-orange hover-orange">
+                                            <li>
+                                                <i class="fa fa-comments-o"></i> 11 Comments
+                                            </li>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+            <!-- <center>
+                <a href=""><div class="loadmorefeed">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div></a>
+            </center> -->
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+
+
+    <!-- Modal NOTIFICATIONS -->
+    <div class="modal modal-comments">
+        <div class="modal-icon-select"><i class="fa fa-sort-asc" aria-hidden="true"></i></div>
+        <div class="modal-title">
+            <span>NOTIFICATIONS</span>
+            <a href="notifications.html">
+                <i class="fa fa-ellipsis-h"></i></a>
+        </div>
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/user-7.jpg" alt="" />
+                        <span><b>Diana Jameson</b>
+                            <br><i>Comment </i> your post<p>4 hours ago</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user-6.jpg" alt="" />
+                        <span><b>Elaine Dreyfuss</b>
+                            <br><i>Like </i> your post<p>Yesterday at 9:56pm</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user-3.jpg" alt="" />
+                        <span><b>Jake Parker</b>
+                            <br><i>Comment </i> your post<p>4 hours ago</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user-6.jpg" alt="" />
+                        <span><b>Elaine Dreyfuss</b>
+                            <br><i>Like </i> your post<p>Yesterday at 9:56pm</p></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Profile -->
+    <div class="modal modal-profile">
+        <div class="modal-icon-select"><i class="fa fa-sort-asc" aria-hidden="true"></i></div>
+        <div class="modal-title">
+            <span>YOUR ACCOUNT</span>
+            <a href="settings.html"><i class="fa fa-cogs"></i></a>
+        </div>
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                        <span><b>Profile Settings</b><br>Yours profile settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-power-off" aria-hidden="true"></i>
+                        <span><b>Log Out</b><br>Close your session</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- NavMobile -->
+    <div class="mobilemenu">
+        
+        <div class="mobilemenu_profile">
+            <img id="mobilemenu_portada" src="images/portada.jpg" />
+            <div class="mobilemenu_profile">
+                <img id="mobilemenu_profile_pic" src="images/user.jpg" /><br>
+                <span>Jonh Hamstrong<br><p>150k followers / 50 follow</p></span>
+            </div>
+            <div class="mobilemenu_menu">
+                <ul>
+                    <li><a href="index.html" id="mobilemenu-selected"><i class="fa fa-globe"></i>Newsfeed</a></li>
+                    <li><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
+                    <li><a href="notifications.html"><i class="fa fa-comments-o"></i>Notifications</a></li>
+                </ul>
+                    <hr>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="Personal-Information.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    // Modals
+    $(document).ready(function(){
+
+
+        $("#messagesmodal").hover(function(){
+            $(".modal-comments").toggle();
+        });
+        $(".modal-comments").hover(function(){
+            $(".modal-comments").toggle();
+        });
+
+
+
+        $("#friendsmodal").hover(function(){
+            $(".modal-friends").toggle();
+        });
+        $(".modal-friends").hover(function(){
+            $(".modal-friends").toggle();
+        });
+
+
+        $("#profilemodal").hover(function(){
+            $(".modal-profile").toggle();
+        });
+        $(".modal-profile").hover(function(){
+            $(".modal-profile").toggle();
+        });
+
+
+        $("#navicon").click(function(){
+            $(".mobilemenu").fadeIn();
+        });
+        $(".all").click(function(){
+            $(".mobilemenu").fadeOut();
+        });
+    });
+    </script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script  src="js/index.js"></script>
+    <script src="js/friend.js"></script>
+    <script src="js/feed.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Jonh Hamstrong - Notifications</title>
+    <link rel="shortcut icon" href="images/LogoOpc2.png" type="image/x-icon">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Icons FontAwesome 4.7.0 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  type="text/css" />
+
+
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_menuicon" id="navicon">
+            <i class="fa fa-navicon"></i>
+        </div>
+        <div class="navbar_logo">
+            <img src="images/LogoOpc2.png" alt="" />
+        </div>
+        <div class="navbar_page">
+            <span>-> NOTIFICATIONS</span>
+        </div>
+        <div class="navbar_search">
+            <form method="" action="/">
+                <input type="text" placeholder="Search people.." />
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="navbar_icons">
+            <ul>
+                <a href="notifications.html" style="color:white">
+                    <li id="messagesmodal">
+                        <i class="fa fa-user-o"></i>
+                        <span id="notification">2</span>
+                    </li>
+                </a>
+                <a href="" style="color:white">
+                    <li>
+                        <i class="fa fa-globe"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="navbar_user" id="profilemodal" style="cursor:pointer">
+            <img src="images/user.jpg" alt="" />
+            <span id="navbar_user_top">Jonh Hamstrong<br><p>User</p></span><i class="fa fa-angle-down"></i>
+        </div>
+    </div>
+
+
+
+    <div class="all">
+
+
+<!-- PARTE IZQUIERDA -->
+        <div class="rowfixed"></div>
+        <div class="left_row">
+            <div class="left_row_profile">
+                <img id="portada" src="images/portada.jpg" />
+                <div class="left_row_profile">
+                    <img id="profile_pic" src="images/user.jpg" />
+                    <span>Jonh Hamstrong<br><p>150k followers / 50 follow</p></span>
+                </div>
+            </div>
+            <div class="rowmenu">
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-globe"></i>Newsfeed</a></li>
+                    <li><a href="profile.html" id="rowmenu-selected"><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
+                </ul>
+            </div>
+        </div>
+
+<!-- PARTE DE SELECCION PESTAÑA -->
+
+        <div class="right_row" style="width:80%;">
+            <div class="row border-radius">
+                <div class="feed">
+                    <div class="feed_title">
+                        <span>
+                            <a href="profile.html"><b>Profile</b></a> 
+                            | <a href="about.html"><b>About</b></a> 
+                            | <a href="notifications.html" id="select_profile_menu"><b>Notifications</b></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row shadow">
+                <div class="row_title">
+                    <span>Notifications</span>
+                </div>
+
+<!-- NOTIFICACION DE COMMENT -->
+                <div class="row border-radius">
+                    <div class="feed">
+                        <div class="feed_title">
+                            <img src="images/user-6.jpg" alt="user" />
+                            <span><a href="otherProfile.html"><b>Valentine Krashe</b></a> comments your <a href="profile.html">Post</a><br>
+                                <p>April 1 at 7:01am</p>
+                            </span>
+                        </div>
+                        <div class="feed_content">
+                            <div class="feed_content_image">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+                            </div>
+                        </div>
+                        <div class="feed_footer">
+                            <ul class="feed_footer_left">
+                                <li id="likeButton" class="hover-orange selected-orange">
+                                    <i class="fa fa-heart"></i> 159
+                                </li>
+                                <li><span><a class="seeMore" href="likeList.html"><b>See who</b></a></span></li>
+                            </ul>
+                            <ul class="feed_footer_right">
+                                <li>
+                                    <a href="moreComents.html" class="selected-orange hover-orange">
+                                        <li>
+                                            <i class="fa fa-comments-o"></i> 14 More comments
+                                        </li>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<!-- NOTIFICACION DE COMMENT                 -->
+
+
+<!-- NOTIFICAION DE LIKE  -->
+                <div class="row border-radius">
+                    <div class="feed">
+                        <div class="feed_title">
+                            <img src="images/user-7.jpg" alt="user" />
+                            <span><a href="otherProfile.html"><b>Francine Smith</b></a> likes your <a href="profile.html">Post</a><br>
+                                <p>April 1 at 7:01am</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+<!-- NOTIFICAION DE LIKE  -->
+            </div>
+            <center>
+                <a href=""><div class="loadmorefeed">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div></a>
+            </center>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+
+
+    <!-- Modal NOTIFICATIONS -->
+    <div class="modal modal-comments">
+        <div class="modal-icon-select"><i class="fa fa-sort-asc" aria-hidden="true"></i></div>
+        <div class="modal-title">
+            <span>NOTIFICATIONS</span>
+            <a href="notifications.html">
+                <i class="fa fa-ellipsis-h"></i></a>
+        </div>
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/user-7.jpg" alt="" />
+                        <span><b>Diana Jameson</b>
+                            <br><i>Comment </i> your post<p>4 hours ago</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user-6.jpg" alt="" />
+                        <span><b>Elaine Dreyfuss</b>
+                            <br><i>Like </i> your post<p>Yesterday at 9:56pm</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user-3.jpg" alt="" />
+                        <span><b>Jake Parker</b>
+                            <br><i>Comment </i> your post<p>4 hours ago</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/user-6.jpg" alt="" />
+                        <span><b>Elaine Dreyfuss</b>
+                            <br><i>Like </i> your post<p>Yesterday at 9:56pm</p></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Profile -->
+    <div class="modal modal-profile">
+        <div class="modal-icon-select"><i class="fa fa-sort-asc" aria-hidden="true"></i></div>
+        <div class="modal-title">
+            <span>YOUR ACCOUNT</span>
+            <a href="settings.html"><i class="fa fa-cogs"></i></a>
+        </div>
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                        <span><b>Profile Settings</b><br>Yours profile settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-power-off" aria-hidden="true"></i>
+                        <span><b>Log Out</b><br>Close your session</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- NavMobile -->
+    <div class="mobilemenu">
+        
+        <div class="mobilemenu_profile">
+            <img id="mobilemenu_portada" src="images/portada.jpg" />
+            <div class="mobilemenu_profile">
+                <img id="mobilemenu_profile_pic" src="images/user.jpg" /><br>
+                <span>Jonh Hamstrong<br><p>150k followers / 50 follow</p></span>
+            </div>
+            <div class="mobilemenu_menu">
+                <ul>
+                    <li><a href="index.html" id="mobilemenu-selected"><i class="fa fa-globe"></i>Newsfeed</a></li>
+                    <li><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                    <li><a href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
+                    <li><a href="notifications.html"><i class="fa fa-comments-o"></i>Notifications</a></li>
+                </ul>
+                    <hr>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="Personal-Information.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    // Modals
+    $(document).ready(function(){
+
+
+        $("#messagesmodal").hover(function(){
+            $(".modal-comments").toggle();
+        });
+        $(".modal-comments").hover(function(){
+            $(".modal-comments").toggle();
+        });
+
+
+
+        $("#friendsmodal").hover(function(){
+            $(".modal-friends").toggle();
+        });
+        $(".modal-friends").hover(function(){
+            $(".modal-friends").toggle();
+        });
+
+
+        $("#profilemodal").hover(function(){
+            $(".modal-profile").toggle();
+        });
+        $(".modal-profile").hover(function(){
+            $(".modal-profile").toggle();
+        });
+
+
+        $("#navicon").click(function(){
+            $(".mobilemenu").fadeIn();
+        });
+        $(".all").click(function(){
+            $(".mobilemenu").fadeOut();
+        });
+    });
+    </script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- <script src="js/main.js"></script> -->
+    <script  src="js/index.js"></script>
+    <script src="js/friend.js"></script>
+    <script src="js/notifications.js"></script>
+</body>
+</html>
